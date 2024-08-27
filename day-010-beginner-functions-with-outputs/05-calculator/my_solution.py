@@ -1,3 +1,4 @@
+
 from art import logo
 
 def calculate(first_number: float, second_number: float, operation: str) -> float:
