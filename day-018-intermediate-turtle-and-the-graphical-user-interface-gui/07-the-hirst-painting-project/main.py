@@ -11,9 +11,7 @@ turtle.color(255, 255, 255)
 bgcolor(200, 200, 200)
 
 
-colors = extract(
-    "A:/luiz-vidal/github/100-days-of-code/day-018-intermediate-turtle-and-the-graphical-user-interface-gui/07-the-hirst-painting-project/image.png", 10
-)
+colors = extract("image.png", 10)
 
 color_list = []
 

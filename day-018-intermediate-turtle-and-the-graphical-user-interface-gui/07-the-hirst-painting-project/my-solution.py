@@ -18,9 +18,7 @@ def rgb_to_hex(rgb):
         clamp(rgb[0]), clamp(rgb[1]), clamp(rgb[2]))
 
 
-colors = extract(
-    "A:/luiz-vidal/github/100-days-of-code/day-018-intermediate-turtle-and-the-graphical-user-interface-gui/07-the-hirst-painting-project/image.png", 10
-)
+colors = extract("image.png", 10)
 
 
 for color in colors:
