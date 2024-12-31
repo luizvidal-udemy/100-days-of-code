@@ -23,14 +23,42 @@
 
 # finally: Do this no matter what happens
 
+# try:
+#     file = open("a_file.tx")
+#     a_dictionary = {"key": "value"}
+#     print(a_dictionary["key_inexisting"])
+#     print(file.read())
+
+# except FileNotFoundError:
+#     file = open("a_file.txt", "w")
+
+# except KeyError as error_message:
+#     print(f"The key {error_message} does not exist.")
+
+# else:
+#     content = file.read()
+#     print(content)
+
+# finally:
+#     file.close()
+#     print("File was closed.")
+
+
+from pathlib import Path
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+CURRENT_DIR = Path(__file__).parent
+
 try:
-    file = open("a_file.tx")
+    file = open(CURRENT_DIR / "a_file.txt")
     a_dictionary = {"key": "value"}
     print(a_dictionary["key_inexisting"])
     print(file.read())
 
 except FileNotFoundError:
-    file = open("a_file.txt", "w")
+    print("There was an error opening the file, creating a new one.")
+    file = open(CURRENT_DIR / "a_file.txt", "w")
+    file.write("Something")
 
 except KeyError as error_message:
     print(f"The key {error_message} does not exist.")
